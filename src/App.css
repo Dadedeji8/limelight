@@ -7,3 +7,33 @@
 body {
     overflow-x: hidden;
 }
+.aboutUs{
+    background-image: url('./assets/svg/graph-svgrepo-com.svg');
+    background-repeat: no-repeat;
+    background-position: 20px -290px ;
+    background-size: contain;
+
+}
+.card-offer::after {
+    content: "READ MORE";
+    
+    position: absolute;
+    inset: 0;
+    background: rgba(31, 41, 55, 0.941); /* Dark gray overlay */
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.5s ease-in-out;
+    z-index: 1; /* Ensure it covers the content */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 26px;
+  }
+  
+  .card-offer:hover::after {
+    transform: scaleY(1);
+  }
+  .card-offer-arrow{
+    z-index: 20;
+  }

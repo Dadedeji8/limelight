@@ -15,6 +15,9 @@ import { Link } from 'react-router-dom';
 import { CgArrowLongDown } from 'react-icons/cg';
 import HeaderComponent from './components/HeaderComponent';
 import NavbarComponent from './components/NavbarComponent';
+import CardComponent from './components/CardComponent';
+import { FaBriefcase } from 'react-icons/fa';
+import { BsArrowRight } from 'react-icons/bs';
 ;
 gsap.registerPlugin(ScrollTrigger);
 function App() {
@@ -96,12 +99,12 @@ function App() {
         </div>
       </div>
       <div className=" w-full ">
-        <section className=" w-full  bg-[#0e0e0e]  pt-14 mt-0 overflow-x-hidden" ref={aboutBox} >
+        <section className=" w-full  bg-[#0e0e0e]  pt-14 mt-0 overflow-x-hidden aboutUs" ref={aboutBox} >
           {/* Overlay section */}
-          <div className='title mb-10 ' id='about'>
+          <div className='title mb-10  ' id='about'>
             <HeaderComponent title='ABOUT US' />
           </div>
-          <div className='flex flex-wrap items-center pt-3  md:max-w-[1080px] m-auto '>
+          <div className='flex flex-wrap items-center pt-3  md:max-w-[1080px] m-auto  '>
             <div className='about-img md:flex-1'>
               <img src={logo} alt="" />
 
@@ -130,16 +133,57 @@ function App() {
             </div>
           </div>
 
-          <div className="cards max-w-[1050px] m-auto mt-20 ">
-            <div className="card max-w-[350px]">
-              <div>img</div>
-              <div><p className='text-white opacity-45 text-sm'>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis qui et in itaque nisi nostrum quod cum. Dicta nisi voluptatem, facilis nostrum omnis ratione consequatur illo. Temporibus deserunt suscipit possimus?</p></div>
-            </div>
+          <div className="cards flex-wrap flex gap-5 max-w-[1200px] m-auto mt-20 px-10">
+            <CardComponent icon='FaBriefcase' />
+            <CardComponent />
+            <CardComponent />
           </div>
+          <section className='bg-[#F5F5F5] pt-16 relative '>
+            <h1 className="text-green-600 font-bold text-3xl md:text-6xl text-center">How We Do It</h1>
+            <div className="img-container relative items-start justify-center max-w-[450px] m-auto">
+              <img src={tree} alt="" className='relative max-w-[150px] md:max-w-[260px] m-auto z-20' />
+              <div className="relative text-sm -left-1 w-fit bottom-20 md:max-w-[185px] md:-left-6">
+                <h1 className="text-black bg-pink-400 p-2 md:p-3 rounded  font-bold">Accomplish goals</h1>
+              </div>
+              <div className="relative text-sm -left-1 w-fit bottom-44 md:bottom-60 md:max-w-[185px] md:-left-6">
+                <h1 className="text-black border bg-orange-500 p-2 md:p-3 rounded  font-bold">Meticulous plannig</h1>
+              </div>
+              <div className="relative text-sm -right-60 w-fit bottom-48 md: max-w-[185px] md:-right-80">
+                <h1 className="text-black bg-green-400 p-2 md:p-3 rounded  font-bold"> make profit</h1>
+              </div>
+            </div>
+          </section>
+          <section className='my-11'>
+
+            <HeaderComponent title='WE OFFER' />
+            <section className='flex gap-5 justify-center my-14'>
+              <Link to={'/'}>
+                <div className="relative transition-all ease-in-out duration-300 card-offer  px-5 py-10 rounded hover:scale-[105%] bg-gray-900 border border-gray-700  hover:border-none   flex flex-col justify-center gap-8 text-white max-w-[350px] overflow-hidden">
+                  <div>
+                    <h1 className="text-5xl font-bold">
+                      Data & Technology</h1>
+                  </div>
+                  <div>
+                    <p className='leading-7 opacity-85'>
+
+                      Together we make your ambition concrete and develop a future proof strategy to make it happen. No pointless PowerPoints, but an actionable strategy supported by your team and organization.
+                    </p>
+                    <span className="h-10 w-10 rounded-full bg-red-400 flex items-center justify-center mt-11 z-20 card-offer-arrow">
+                      <BsArrowRight />
+                    </span>
+                  </div>
+                  <div className="absolute inset-0 bg-gray-700 transition-transform duration-500 ease-in-out scale-y-0 hover:scale-y-100 origin-bottom">
+                    hello
+                  </div>
+                </div></Link>
+
+
+            </section>
+          </section>
+
         </section>
 
-      </div>
+      </div >
     </>
 
   )
