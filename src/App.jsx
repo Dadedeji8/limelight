@@ -142,13 +142,13 @@ function App() {
             <h1 className="text-green-600 font-bold text-3xl md:text-6xl text-center">How We Do It</h1>
             <div className="img-container relative items-start justify-center max-w-[450px] m-auto">
               <img src={tree} alt="" className='relative max-w-[150px] md:max-w-[260px] m-auto z-20' />
-              <div className="relative text-sm -left-1 w-fit bottom-20 md:max-w-[185px] md:-left-6">
+              <div className="relative text-sm left-[0.4rem] w-fit bottom-20 md:max-w-[185px] md:-left-6">
                 <h1 className="text-black bg-pink-400 p-2 md:p-3 rounded  font-bold">Accomplish goals</h1>
               </div>
               <div className="relative text-sm -left-1 w-fit bottom-44 md:bottom-60 md:max-w-[185px] md:-left-6">
                 <h1 className="text-black border bg-orange-500 p-2 md:p-3 rounded  font-bold">Meticulous plannig</h1>
               </div>
-              <div className="relative text-sm -right-60 w-fit bottom-48 md: max-w-[185px] md:-right-80">
+              <div className="relative text-sm right-[-15.2rem] w-fit bottom-48 md: max-w-[185px] md:-right-80">
                 <h1 className="text-black bg-green-400 p-2 md:p-3 rounded  font-bold"> make profit</h1>
               </div>
             </div>
