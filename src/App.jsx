@@ -16,8 +16,9 @@ import { CgArrowLongDown } from 'react-icons/cg';
 import HeaderComponent from './components/HeaderComponent';
 import NavbarComponent from './components/NavbarComponent';
 import CardComponent from './components/CardComponent';
-import { FaBriefcase } from 'react-icons/fa';
+import { FaBriefcase, FaInstagram } from 'react-icons/fa';
 import { BsArrowRight } from 'react-icons/bs';
+import { ImInstagram } from 'react-icons/im';
 ;
 gsap.registerPlugin(ScrollTrigger);
 function App() {
@@ -182,7 +183,30 @@ function App() {
           </section>
 
         </section>
-
+        <section className='bg-blue-950 p-6 py-16'>
+          <div className='my-20'>
+            <HeaderComponent title='Contact Us' />
+          </div>
+          <form action="" className='px-10 flex flex-col gap-6'>
+            <div className='border bg-blue-950 rounded-xl p-2'>
+              <input type="text" className='focus:outline-none p-1 w-full bg-blue-950' placeholder='JohnDoe@email.com' />
+            </div>
+            <div className='border bg-blue-950 rounded-xl p-2'>
+              <input type="text" className='focus:outline-none p-1 w-full bg-blue-950' placeholder='Name' />
+            </div>
+            <div className='border bg-blue-950 rounded-xl p-2'>
+              <textarea className='focus:outline-none p-1 w-full bg-blue-950' placeholder='text' />
+            </div>
+            <button className='text-white font-extrabold bg-green-600 p-3 rounded-xl'>
+              SUBMIT
+            </button>
+          </form>
+          <div className='flex justify-center mt-10'>
+            <Link to={'/'} className="flex items-center justify-center border-2 p-3 rounded-full hover:bg-white">
+              <FaInstagram className='text-2xl text-white hover:text-yellow-900 font-semibold pointer' />
+            </Link>
+          </div>
+        </section>
       </div >
     </>
 
