@@ -2,6 +2,10 @@ import { useState, useRef, useEffect } from 'react'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import logo from '../public/chdesky1-removebg-preview(1).png'
+import img1 from './assets/img/2148956941.jpg'
+import img2 from './assets/img/2508.jpg'
+import img3 from './assets/img/8919.jpg'
+import tree from './assets/img/tree-grows-coin-glass-jar-with-copy-space.png'
 import Lenis from 'lenis'
 import './App.css'
 import 'lenis/dist/lenis.css'
@@ -10,16 +14,14 @@ import bgVideo from './assets/videos/bgmain.mp4'
 import { Link } from 'react-router-dom';
 import { CgArrowLongDown } from 'react-icons/cg';
 import HeaderComponent from './components/HeaderComponent';
+import NavbarComponent from './components/NavbarComponent';
 ;
 gsap.registerPlugin(ScrollTrigger);
 function App() {
   // Initialize Lenis
   const lenis = new Lenis();
 
-  // Listen for the scroll event and log the event data
-  // lenis.on('scroll', (e) => {
-  //   console.log(e);
-  // });
+
 
   // Use requestAnimationFrame to continuously update the scroll
 
@@ -59,53 +61,7 @@ function App() {
       duration: 1,
       ease: "power1.inOut"
     });
-    // timeline for the scroll section
-    // const sectionTl = gsap.timeline(
 
-    //   {
-    //     defaults: {
-    //       duration: 3,
-    //       ease: 'Power3.easeInOut'
-    //     },
-    //     scrollTrigger: {
-    //       trigger: container,
-    //       start: "top 80%", // Start animation when the top of the container is 80% in the viewport
-    //       end: "90% 90%", // End animation when the bottom is 20% in the viewport
-    //       scrub: true, // Sync animation with scroll
-    //       markers: true, // Enable markers for debugging
-    //     },
-    //   }
-    // )
-    // // this is for the scroll section
-    // sectionTl.fromTo(container.querySelector(".title"), {
-    //   opacity: 0,
-    //   y: '-50'
-    // }, {
-    //   opacity: 1,
-    //   y: 0
-    // }).fromTo(container.querySelector(".about-text"),
-    //   {
-    //     x: "100%",
-    //     opacity: 0
-    //   },
-    //   {
-    //     x: 0,
-    //     opacity: 1
-    //   }
-    // ).fromTo(
-    //   container.querySelector(".about-img"),
-    //   {
-    //     x: "-100%",
-    //     opacity: 0,
-    //     scale: 0.8
-    //   },
-
-    //   {
-    //     x: 0,
-    //     opacity: 1,
-    //     scale: 1.2
-    //   },
-    // )
   }
 
     , [])
@@ -115,13 +71,7 @@ function App() {
   return (
     <>
       <div className=" relative top-0 left-0 w-full h-screen overflow-x-hidden">
-        <nav className='absolute px-9 pt-5 z-30'>
-          <div className=" text-white hover:text-yellow-900 duration-500 flex items-center justify-center cursor-pointer">
-            <Link to={'/'} className='rounded-full cursor-pointer text-3xl font-black text-shadow-lg'>
-              LIMELIGHT
-            </Link>
-          </div>
-        </nav>
+        <NavbarComponent />
         <div className="w-screen h-screen absolute bg-black  saturate-200 contrast-150 -z-10 select-none opacity-70 ">
 
         </div>
@@ -146,20 +96,45 @@ function App() {
         </div>
       </div>
       <div className=" w-full ">
-        {/* Overlay section */}
-        <section className=" w-full bg-[#0e0e0e] pt-14 mt-0 overflow-x-hidden" ref={aboutBox} >
+        <section className=" w-full  bg-[#0e0e0e]  pt-14 mt-0 overflow-x-hidden" ref={aboutBox} >
+          {/* Overlay section */}
           <div className='title mb-10 ' id='about'>
             <HeaderComponent title='ABOUT US' />
-
           </div>
-          <div className='flex flex-wrap items-center pt-3  md:max-w-[1080px] m-auto'>
+          <div className='flex flex-wrap items-center pt-3  md:max-w-[1080px] m-auto '>
             <div className='about-img md:flex-1'>
               <img src={logo} alt="" />
 
             </div>
             <div className='about-text md:flex-1'>
-              <p className='text-white leading-loose'>Welcome to Limelight, where we specialize in helping businesses shine. We are a cutting-edge lead generation agency dedicated to connecting you with the right prospects to fuel your growth. With a strategic blend of data-driven insights, innovative technology, and personalized solutions, we bring your brand to the forefront of your industry.
+              <p className='text-center md:text-left text-white leading-loose'>Welcome to Limelight, where we specialize in helping businesses shine. We are a cutting-edge lead generation agency dedicated to connecting you with the right prospects to fuel your growth. With a strategic blend of data-driven insights, innovative technology, and personalized solutions, we bring your brand to the forefront of your industry.
               </p>
+            </div>
+          </div>
+        </section>
+        <section className=" w-full bg-[#0e0e0e] pt-14 mt-0 overflow-x-hidden" ref={aboutBox} >
+          {/* Overlay section */}
+
+          <div className='flex md:flex-wrap items-center pt-3 gap-3  flex-wrap-reverse  md:flex-row md:max-w-[1080px] m-auto '>
+
+            <div className='about-text md:flex-1 flexflex-col gap-16 items-start'>
+              <div className='md:flex mt-10 md:mt-0 md:justify-end'>
+                <HeaderComponent title='Key principles' />
+              </div>
+              <p className='text-white leading-loose text-center md:text-right mt-10'>In Limelight we rely on data analysis and metrics to make informed decisions. Using tools and technologies to track user behaviour, measure key performance indicators (KPIs), and identify areas for improvement.
+              </p>
+            </div>
+            <div className='about-img md:flex-1'>
+              <img src={img1} alt="" />
+
+            </div>
+          </div>
+
+          <div className="cards max-w-[1050px] m-auto mt-20 ">
+            <div className="card max-w-[350px]">
+              <div>img</div>
+              <div><p className='text-white opacity-45 text-sm'>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis qui et in itaque nisi nostrum quod cum. Dicta nisi voluptatem, facilis nostrum omnis ratione consequatur illo. Temporibus deserunt suscipit possimus?</p></div>
             </div>
           </div>
         </section>
