@@ -1,0 +1,9 @@
+.logo {
+    -webkit-box-shadow: 0px 0px 148px 25px rgba(250, 100, 0, 0.37);
+    -moz-box-shadow: 0px 0px 148px 25px rgba(250, 100, 0, 0.37);
+    box-shadow: 0px 0px 148px 25px rgba(250, 100, 0, 0.591);
+}
+
+body {
+    overflow-x: hidden;
+}
