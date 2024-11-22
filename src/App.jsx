@@ -33,10 +33,10 @@ function App() {
   const heroTextRef = useRef(null)
   const smallerHeroText = useRef(null)
   const downArrow = useRef(null)
-  const boxRef = useRef(null);
+  const aboutBox = useRef(null);
 
   useEffect(() => {
-    const container = boxRef.current
+    const container = aboutBox.current
     // timeline for hero section
     const tl = gsap.timeline({
       defaults: {
@@ -60,55 +60,56 @@ function App() {
       ease: "power1.inOut"
     });
     // timeline for the scroll section
-    const sectionTl = gsap.timeline(
+    // const sectionTl = gsap.timeline(
 
-      {
-        defaults: {
-          duration: 1.5,
-          ease: 'Power3.easeInOut'
-        },
-        scrollTrigger: {
-          trigger: container,
-          start: "top 80%", // Start animation when the top of the container is 80% in the viewport
-          end: "90% 90%", // End animation when the bottom is 20% in the viewport
-          scrub: true, // Sync animation with scroll
-          markers: true, // Enable markers for debugging
-        },
-      }
-    )
-    // this is for the scroll section
-    sectionTl.fromTo(container.querySelector(".title"), {
-      opacity: 0,
-      y: '-50'
-    }, {
-      opacity: 1,
-      y: 0
-    }).fromTo(container.querySelector(".about-text"),
-      {
-        x: "100%",
-        opacity: 0
-      },
-      {
-        x: 0,
-        opacity: 1
-      }
-    ).fromTo(
-      container.querySelector(".about-img"),
-      {
-        x: "-100%",
-        opacity: 0,
-        scale: 0.8
-      },
+    //   {
+    //     defaults: {
+    //       duration: 3,
+    //       ease: 'Power3.easeInOut'
+    //     },
+    //     scrollTrigger: {
+    //       trigger: container,
+    //       start: "top 80%", // Start animation when the top of the container is 80% in the viewport
+    //       end: "90% 90%", // End animation when the bottom is 20% in the viewport
+    //       scrub: true, // Sync animation with scroll
+    //       markers: true, // Enable markers for debugging
+    //     },
+    //   }
+    // )
+    // // this is for the scroll section
+    // sectionTl.fromTo(container.querySelector(".title"), {
+    //   opacity: 0,
+    //   y: '-50'
+    // }, {
+    //   opacity: 1,
+    //   y: 0
+    // }).fromTo(container.querySelector(".about-text"),
+    //   {
+    //     x: "100%",
+    //     opacity: 0
+    //   },
+    //   {
+    //     x: 0,
+    //     opacity: 1
+    //   }
+    // ).fromTo(
+    //   container.querySelector(".about-img"),
+    //   {
+    //     x: "-100%",
+    //     opacity: 0,
+    //     scale: 0.8
+    //   },
 
-      {
-        x: 0,
-        opacity: 1,
-        scale: 1.2
-      },
-    )
+    //   {
+    //     x: 0,
+    //     opacity: 1,
+    //     scale: 1.2
+    //   },
+    // )
   }
 
     , [])
+  useEffect(() => { }, [])
 
 
   return (
@@ -133,7 +134,7 @@ function App() {
         ></video>
         <div className='px-3 absolute top-0 left-0 z-20 w-full h-svh flex items-center flex-col justify-center'>
           <h1 ref={smallerHeroText} className=' text-slate-600 font-bold uppercase md:text-2xl md:leading-loose md:tracking-[1.1rem] text-center opacity-0 translate-y-36 '>
-            your business deserves to be seen
+            your business deserves to be seen
           </h1>
           <h1 ref={heroTextRef} className='text-white font-extrabold text-center text-3xl lg:text-8xl  tracking-tighter leading-[10rem opacity-100]'>Step Into the spotlight with <span className='text-yellow-900 text-shadow '> Limelight</span></h1>
           <span ref={downArrow}>
@@ -144,14 +145,14 @@ function App() {
           </span>
         </div>
       </div>
-      <div className=" w-full h-screen">
+      <div className=" w-full ">
         {/* Overlay section */}
-        <section className="h-screen w-full bg-[#0e0e0e] py-14 mt-0 overflow-x-hidden" ref={boxRef} >
+        <section className=" w-full bg-[#0e0e0e] pt-14 mt-0 overflow-x-hidden" ref={aboutBox} >
           <div className='title mb-10 ' id='about'>
-            <HeaderComponent />
+            <HeaderComponent title='ABOUT US' />
 
           </div>
-          <div className='flex flex-wrap items-center px-3  md:max-w-[1080px] m-auto'>
+          <div className='flex flex-wrap items-center pt-3  md:max-w-[1080px] m-auto'>
             <div className='about-img md:flex-1'>
               <img src={logo} alt="" />
 
@@ -162,6 +163,7 @@ function App() {
             </div>
           </div>
         </section>
+
       </div>
     </>
 
