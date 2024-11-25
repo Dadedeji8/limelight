@@ -135,9 +135,9 @@ function App() {
           </div>
 
           <div className="cards flex-wrap flex gap-5 max-w-[1200px] m-auto mt-20 px-10">
-            <CardComponent icon='FaBriefcase' content='GDPR-compliant contact details from official trade registers and public web data help you reach out to the right person to close the deal.' />
-            <CardComponent content={' helps sales and marketing teams get a grip of all their visitors, leads, and customers and understand each interaction while leveraging data to nurture and close deals. Use data to qualify leads and nurture them on every step of the buyer journey.'} />
-            <CardComponent content='Predict visitor quality even if they cannot be identified and run highly targeted marketing campaigns to qualified visitors on and off your website and convert them into customers' />
+            <CardComponent icon='FaBriefcase' title='Contact' content='GDPR-compliant contact details from official trade registers and public web data help you reach out to the right person to close the deal.' />
+            <CardComponent title='assist' content={' helps sales and marketing teams get a grip of all their visitors, leads, and customers and understand each interaction while leveraging data to nurture and close deals. Use data to qualify leads and nurture them on every step of the buyer journey.'} />
+            <CardComponent title='Campaign' content='Predict visitor quality even if they cannot be identified and run highly targeted marketing campaigns to qualified visitors on and off your website and convert them into customers' />
           </div>
           <section className='bg-[#F5F5F5] pt-16 relative '>
             <h1 className="text-green-600 font-bold text-3xl md:text-6xl text-center">How We Do It</h1>
@@ -180,7 +180,7 @@ function App() {
               <Link to={'/'}>
                 <div className="relative transition-all ease-in-out duration-300 card-offer  px-5 py-10 rounded hover:scale-[105%] bg-gray-900 border border-gray-700  hover:border-none   flex flex-col justify-center gap-8 text-white max-w-[350px] overflow-hidden h-[483px]">
                   <div>
-                    <h1 className="text-5xl font-bold">
+                    <h1 className="text-3xl font-bold">
                       Personalized Strategies</h1>
                   </div>
                   <div>
