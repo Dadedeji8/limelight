@@ -157,7 +157,7 @@ function App() {
           <section className='my-11'>
 
             <HeaderComponent title='WE OFFER' />
-            <section className='flex gap-5 justify-center my-14'>
+            <section className='flex flex-wrap gap-5 justify-center my-14'>
               <Link to={'/'}>
                 <div className="relative transition-all ease-in-out duration-300 card-offer  px-5 py-10 rounded hover:scale-[105%] bg-gray-900 border border-gray-700  hover:border-none   flex flex-col justify-center gap-8 text-white max-w-[350px] overflow-hidden h-[483px]">
                   <div>
