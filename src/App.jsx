@@ -135,21 +135,21 @@ function App() {
           </div>
 
           <div className="cards flex-wrap flex gap-5 max-w-[1200px] m-auto mt-20 px-10">
-            <CardComponent icon='FaBriefcase' />
-            <CardComponent />
-            <CardComponent />
+            <CardComponent icon='FaBriefcase' content='GDPR-compliant contact details from official trade registers and public web data help you reach out to the right person to close the deal.' />
+            <CardComponent content={' helps sales and marketing teams get a grip of all their visitors, leads, and customers and understand each interaction while leveraging data to nurture and close deals. Use data to qualify leads and nurture them on every step of the buyer journey.'} />
+            <CardComponent content='Predict visitor quality even if they cannot be identified and run highly targeted marketing campaigns to qualified visitors on and off your website and convert them into customers' />
           </div>
           <section className='bg-[#F5F5F5] pt-16 relative '>
             <h1 className="text-green-600 font-bold text-3xl md:text-6xl text-center">How We Do It</h1>
             <div className="img-container relative items-start justify-center max-w-[450px] m-auto">
               <img src={tree} alt="" className='relative max-w-[150px] md:max-w-[260px] m-auto z-20' />
-              <div className="relative text-sm left-[0.4rem] w-fit bottom-20 md:max-w-[185px] md:-left-6">
+              <div className="relative text-sm left-[0.4rem] w-fit bottom-28 md:max-w-[185px] md:-left-6">
                 <h1 className="text-black bg-pink-400 p-2 md:p-3 rounded  font-bold">Connet with hight quality leads</h1>
               </div>
-              <div className="relative text-sm -left-1 w-fit bottom-44 md:bottom-60 md:max-w-[185px] md:-left-6">
+              <div className="relative text-sm -left-1 w-fit bottom-52 md:bottom-60 md:max-w-[185px] md:-left-12">
                 <h1 className="text-black border bg-orange-500 p-2 md:p-3 rounded  font-bold">Create large email list </h1>
               </div>
-              <div className="relative text-sm right-[-15.2rem] w-fit bottom-48 md: max-w-[185px] md:-right-80">
+              <div className="relative text-sm right-[-15.2rem] w-fit bottom-64 md: max-w-[185px] md:-right-80">
                 <h1 className="text-black bg-green-400 p-2 md:p-3 rounded  font-bold">Close deals via cold calls</h1>
               </div>
             </div>
@@ -159,7 +159,7 @@ function App() {
             <HeaderComponent title='WE OFFER' />
             <section className='flex gap-5 justify-center my-14'>
               <Link to={'/'}>
-                <div className="relative transition-all ease-in-out duration-300 card-offer  px-5 py-10 rounded hover:scale-[105%] bg-gray-900 border border-gray-700  hover:border-none   flex flex-col justify-center gap-8 text-white max-w-[350px] overflow-hidden">
+                <div className="relative transition-all ease-in-out duration-300 card-offer  px-5 py-10 rounded hover:scale-[105%] bg-gray-900 border border-gray-700  hover:border-none   flex flex-col justify-center gap-8 text-white max-w-[350px] overflow-hidden h-[483px]">
                   <div>
                     <h1 className="text-5xl font-bold">
                       Data & Technology</h1>
@@ -177,6 +177,43 @@ function App() {
                     hello
                   </div>
                 </div></Link>
+              <Link to={'/'}>
+                <div className="relative transition-all ease-in-out duration-300 card-offer  px-5 py-10 rounded hover:scale-[105%] bg-gray-900 border border-gray-700  hover:border-none   flex flex-col justify-center gap-8 text-white max-w-[350px] overflow-hidden h-[483px]">
+                  <div>
+                    <h1 className="text-5xl font-bold">
+                      Personalized Strategies</h1>
+                  </div>
+                  <div>
+                    <p className='leading-7 opacity-85'>
+                      When sourcing leads for our clients, we leverage real-time intent data to detect keyword surges for your unique offering. This allows us to pinpoint companies that are looking for products or services in your industry and engage decision-makers with personalized outreach during their vendor assessment process.
+                    </p>
+                    <span className="h-10 w-10 rounded-full bg-red-400 flex items-center justify-center mt-11 z-20 card-offer-arrow">
+                      <BsArrowRight />
+                    </span>
+                  </div>
+                  <div className="absolute inset-0 bg-gray-700 transition-transform duration-500 ease-in-out scale-y-0 hover:scale-y-100 origin-bottom">
+                    hello
+                  </div>
+                </div></Link>
+              <Link to={'/'}>
+                <div className="relative transition-all ease-in-out duration-300 card-offer  px-5 py-10 rounded hover:scale-[105%] bg-gray-900 border border-gray-700  hover:border-none   flex flex-col justify-center gap-8 text-white max-w-[350px] overflow-hidden h-[483px]">
+                  <div>
+                    <h1 className="text-5xl font-bold">
+                      Registration</h1>
+                  </div>
+                  <div>
+                    <p className='leading-7 opacity-85'>
+                      Drive new client registrations, book appointments, and land logos for your business. Our outsourced sales team has gained a unique understanding of the nuances in a variety of industries, enabling us to develop the best strategy based on your target market and ideal buyer personas.
+                    </p>
+                    <span className="h-10 w-10 rounded-full bg-red-400 flex items-center justify-center mt-11 z-20 card-offer-arrow">
+                      <BsArrowRight />
+                    </span>
+                  </div>
+                  <div className="absolute inset-0 bg-gray-700 transition-transform duration-500 ease-in-out scale-y-0 hover:scale-y-100 origin-bottom">
+                    hello
+                  </div>
+                </div></Link>
+              s
 
 
             </section>
